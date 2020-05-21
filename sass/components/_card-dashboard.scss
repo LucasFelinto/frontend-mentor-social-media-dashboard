@@ -1,0 +1,131 @@
+.card-dashboard {
+  background-color: $light-grayish-blue;
+  color: $dark-grayish-blue;
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  &.-dark {
+    background-color: $dark-desaturated-blue;
+    color: $desaturated-blue;
+  }
+
+  & > .text {
+    font-size: 1.2rem;
+    color: inherit;
+
+    &.-social {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    &.-today {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+
+      & svg {
+        margin-right: 5px;
+      }
+
+      &.up {
+        color: $lime-green;
+      }
+
+      &.down {
+        color: $bright-red;
+      }
+    }
+
+    & svg {
+      margin-right: 10px;
+    }
+  }
+
+  & > .value {
+    font-size: 5.6rem;
+    color: $dark-blue;
+
+    &.-dark {
+      color: $white;
+    }
+  }
+
+  & > .followers {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-top: 5px;
+  }
+
+  &.-followers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+  }
+
+  &.-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    grid-row-gap: 15px;
+
+    &.-dark {
+      background-color: $dark-desaturated-blue;
+      color: $desaturated-blue;
+    }
+
+    padding: 15px 35px;
+
+    & > svg {
+      justify-self: flex-end;
+    }
+
+    & > .text {
+      font-size: 1.4rem;
+    }
+
+    & > .text.-today {
+      // font-size: 30rem !important;
+      justify-self: flex-end;
+    }
+
+    & > .value {
+      font-size: 3.6rem;
+
+      &.-dark {
+        color: $white;
+      }
+    }
+  }
+
+  &.-facebook {
+    border-top: 4px solid $facebook;
+  }
+
+  &.-twitter {
+    border-top: 4px solid $twitter;
+  }
+
+  &.-instagram {
+    position: relative;
+    border-radius: 0 0 4px 4px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      top: 0;
+      border-radius: 4px 4px 0 0;
+      background-image: linear-gradient($instagram);
+    }
+  }
+
+  &.-youtube {
+    border-top: 4px solid $youtube;
+  }
+}
